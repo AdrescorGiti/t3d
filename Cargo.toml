@@ -1,0 +1,15 @@
+[package]
+name = "t3d"
+version = "1.0.0"
+edition = "2021"
+authors = ["AdrescorGiti"]
+description = "Terminal 3D engine with Phong shading and Braille subpixels"
+license = "MIT"
+
+[dependencies]
+crossterm = "0.29.0"
+
+[package.metadata.generate-rpm]
+assets = [
+    { source = "target/release/t3d", dest = "/usr/bin/t3d", mode = "755" }
+]
